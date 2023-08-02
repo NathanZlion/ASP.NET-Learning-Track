@@ -1,4 +1,5 @@
-﻿
+﻿using System.Text.RegularExpressions;
+
 
 public class Program
 {
@@ -13,6 +14,8 @@ public class Program
                 break;
             }
 
+            input = RemovePunctuation(input);
+
             if (!IsPalindrome(word: input))
             {
                 Console.WriteLine($"> NO: {input} is not palindrome");
@@ -22,6 +25,13 @@ public class Program
                 Console.WriteLine($"> YES: {input} is palindrome");
             }
         }
+    }
+
+    static string RemovePunctuation(string input)
+    {
+        string pattern = @"\p{P}";
+        string result = Regex.Replace(input, pattern, "");
+        return result;
     }
 
     public static bool IsPalindrome(string word)

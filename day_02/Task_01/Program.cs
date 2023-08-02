@@ -30,8 +30,8 @@ public class Program
 
             while (true)
             {
-                bool validInteger = double.TryParse(Console.ReadLine(), out subjectPoints);
-                if (!validInteger)
+                bool validDouble = double.TryParse(Console.ReadLine(), out subjectPoints);
+                if (!validDouble)
                 {
                     Console.WriteLine("Please enter a valid Integer value. \n :-");
                     continue;
@@ -59,12 +59,12 @@ public class Program
 
         foreach (Subject subject in subjects)
         {
-            Console.WriteLine($"{count}, Name: {subject.Name}.... Point: {subject.Points}............Grade:{UtilMethods.GetGrade(subject.Points)}");
+            Console.WriteLine($"{count}, Name: {subject.Name}.. Point: {subject.Points}..Grade:{UtilMethods.GetGrade(subject.Points)}");
             total += subject.Points;
             count++;
         }
 
-        double average = (double)total / subjects.Count;
+        double average = total / subjects.Count;
 
         Console.WriteLine($"\n>> Average points: {average}%");
         Console.WriteLine($">> Average Grade: {UtilMethods.GetGrade(average)}\n");
