@@ -18,6 +18,7 @@ class Program
         if (!success)
         {
             Console.WriteLine("Please enter a numberic input");
+            return 1;
         }
 
         long result = Func.GetFactorial(input);
