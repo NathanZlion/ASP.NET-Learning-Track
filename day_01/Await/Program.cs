@@ -2,13 +2,13 @@
 
 public class Program
 {
-    public static async Task Main()
+    public static void Main()
     {
-        int result = await Program.getNumber();
+        int result = Program.getNumber();
         Console.WriteLine(result);
     }
 
-    static async Task<int> getNumber() {
+    public static int getNumber() {
         return 12;
     }
 }
