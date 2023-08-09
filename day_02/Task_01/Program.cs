@@ -7,11 +7,11 @@ public class Program
     {
         // Prompt user for name input
         Console.Write("Enter your name: ");
-        string student_name = Console.ReadLine();
+        string? student_name = Console.ReadLine();
 
         // Prompt user for the number of subjects taken
         Console.Write("Enter the number of subjects taken: ");
-        int number_of_subjects = int.Parse(Console.ReadLine());
+        int number_of_subjects = int.Parse(Console.ReadLine()!);
 
         // Create a list of subjects
         List<Subject> subjects = new();
@@ -22,7 +22,7 @@ public class Program
         for (int i = 1; i <= number_of_subjects; i++)
         {
             Console.Write($"{i}. Enter subject name: ");
-            string subjectName = Console.ReadLine();
+            string? subjectName = Console.ReadLine();
 
             Console.Write($"{i}. Enter subject points: ");
 
