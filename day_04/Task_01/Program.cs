@@ -10,8 +10,7 @@ namespace SimpleTaskManger {
                 await taskManager.ReadDataFromFile();
             } catch (Exception e) {
                 string errorMessage = $"Error running program : {e.Message}";
-                Console.WriteLine(errorMessage);
-                return;
+                throw;
             }
         }
 

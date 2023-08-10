@@ -5,7 +5,11 @@ namespace SimpleTaskManger
         public static void Main()
         {
             var program = new Program();
-            program.Start();
+            try {
+                program.Start();
+            } catch {
+                return;
+            }
             while (true)
             {
                 Program.PrintOptions();
