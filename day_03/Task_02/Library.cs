@@ -22,9 +22,18 @@ namespace LibraryCatalogSystem
 
         public void PrintCatalog()
         {
+            PrintBooks();
+            PrintMediaItems();
+        }
+
+        private void PrintBooks()
+        {
             foreach (var book in Books)
                 Console.WriteLine($"{{Book}} Title - {book.Title} | Author - {book.Author}");
+        }
 
+        private void PrintMediaItems()
+        {
             foreach (var mediaItem in MediaItems)
                 Console.WriteLine($"{{Media}} Title - {mediaItem.Title} | Duration - {mediaItem.Duration}");
         }
