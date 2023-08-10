@@ -1,0 +1,2 @@
+## Objective
+In this programming task, you are required to implement a simple library catalog system using object-oriented programming concepts in C#. The system should be able to handle books and media items, such as DVDs and CDs. You need to design and implement classes to represent the library, books, and media items, and provide methods to perform various operations on them.
